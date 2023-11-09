@@ -7,15 +7,14 @@ public class Jewels {
 
     public int numJewelsInStones(String jewels, String stones) {
 
-        Set<Character> jewel = new HashSet<>();
-        for (char ch : jewels.toCharArray()) {
-            jewel.add(ch);
-        }
+        Set<Character> uniqJewels = new HashSet<>();
+        for (char ch : jewels.toCharArray())
+            uniqJewels.add(ch);
 
         int count = 0;
 
         for (char c : stones.toCharArray()) {
-            if (jewel.contains(c))
+            if (uniqJewels.contains(c))
                 count++;
         }
         return count;

@@ -5,7 +5,7 @@ public class Balloons {
     public int maxNumberOfBalloons(String text) {
 
         int[] frequency = new int[5];
-        int[] ballon = {1, 1, 2, 2, 1};
+        int[] balloon = {1, 1, 2, 2, 1};
 
         for (char c : text.toLowerCase().toCharArray()) {
             switch (c) {
@@ -20,7 +20,7 @@ public class Balloons {
         int minInstances = Integer.MAX_VALUE;
 
         for (int i = 0; i < frequency.length; i++) {
-            minInstances = Math.min(minInstances,frequency[i] / ballon[i]);
+            minInstances = Math.min(minInstances,frequency[i] / balloon[i]);
         }
 
         return minInstances;
